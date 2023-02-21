@@ -21,23 +21,7 @@
             emailjs.init('hbpK3hUl2W9wIxkYz');
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                // this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('service_c8uv8pn', 'template_bdbc7hk', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                        alert("Thanks For Donating");
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+    
 </head>
 
 <body>
@@ -144,6 +128,36 @@
             </div>
         </form>
     </div>
+    <div class="sucess">
+        <h2 id="sucess-heading"></h2>
+        <p id="sucess-message"></p>
+    </div>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                // this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_c8uv8pn', 'template_bdbc7hk', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        const removeContainer = document.querySelector('.form-container');
+                        removeContainer.style.display = 'none';
+                        const sucessHeading = document.getElementById('sucess-heading');
+                        sucessHeading.innerHTML = 'Thanks For Donating';
+                        const sucessMessage = document.getElementById('sucess-message');
+                        sucessMessage.innerHTML = "Thank you for your efforts to support needy people. Your assistance and generosty definitely make a difference!."
+                        const list = document.getElementById("sucess-heading").classList;
+                        list.add("display-active");
+                        console.log(sucessHeading);
+                        // alert("Thanks For Donating");
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>

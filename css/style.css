@@ -12,6 +12,17 @@ body{
     margin: 0;
 }
 
+/* display-none display-active */
+.sucess{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #303054;
+}
 /* Heading */
 .heading h2{
     font-size: 28px;

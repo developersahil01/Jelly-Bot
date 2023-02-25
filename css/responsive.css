@@ -2,6 +2,13 @@
     .home-sec .home-content {
         padding: 70px 0;
     }
+    .container nav a img {
+        width: 70%;
+    }
+    .marquee p{
+        margin-top: 20px;
+        font-size: large;
+    }
     .cont-sec p,
     .cont-sec .social {
         text-align: center;

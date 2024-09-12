@@ -143,6 +143,7 @@ nav{
 
 .home-sec .img-sec img{
     width: 400px;
+   border: round;
 }
 
 .home-sec .home-content{

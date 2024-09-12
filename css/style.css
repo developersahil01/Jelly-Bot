@@ -61,6 +61,7 @@ body{
 .btn1:hover{
     background-color: #e6edff;
     color: #303054;
+	margin-top: 20px;
 }
 
 /* Header */

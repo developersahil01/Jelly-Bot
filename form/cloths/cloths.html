@@ -130,8 +130,16 @@
             </section>
             <script>
                 function func(){
-                    var email= document.getElementbyId(Email Address);
-                    var 
+                    var email= document.getElementbyId("Email Address").value;
+                    var password = document.getElementbyId("Password").value; 
+                    if (email=='sksajbs27@gmail.com' && pass == '123456'){
+                        alert("Succesful !");
+                        window.location.assign("cloths.html")
+                    }
+                        else{
+                            alert("Invalid email")
+                        }
+                }
                 
     <div class="sucess">
         <h2 id="sucess-heading"></h2>
